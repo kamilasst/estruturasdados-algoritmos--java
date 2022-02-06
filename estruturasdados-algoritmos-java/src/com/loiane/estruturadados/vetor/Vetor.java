@@ -18,18 +18,21 @@ public class Vetor {
 	 *		if (this.elementos[i] == null) {
 	 *			this.elementos[i] = elemento; 
 	 *			break; 
-	 		} 
-		} 
+	 *		} 
+	 *	} 
 	 * }
 	 */
 
 	/*
 	 * public void adiciona(String elemento) throws Exception {
 	 * 
-	 * if (this.tamanho < this.elementos.length) { this.elementos[this.tamanho] =
-	 * elemento; this.tamanho++; } else { throw new
-	 * Exception("Vetor já está cheio, não é possível adicionar mais elementos"); }
-	 * }
+	 * 	if (this.tamanho < this.elementos.length) { 
+	 *		this.elementos[this.tamanho] = elemento; 
+	 *		this.tamanho++;
+	 *		} else { 
+	 *			throw new Exception ("Vetor já está cheio, não é possível adicionar mais elementos"); 
+	 *  		}
+	 * 	}
 	 */
 
 	public boolean adicionar(String elemento) {
