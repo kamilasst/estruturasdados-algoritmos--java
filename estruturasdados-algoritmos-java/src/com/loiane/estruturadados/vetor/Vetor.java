@@ -154,5 +154,4 @@ public class Vetor {
 
 		return s.toString();
 	}
-
 }
