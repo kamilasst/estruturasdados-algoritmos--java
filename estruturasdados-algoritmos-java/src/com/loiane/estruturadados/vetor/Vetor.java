@@ -10,12 +10,17 @@ public class Vetor {
 		this.tamanho = 0;
 	}
 
-	// Adicionar elemento final do vetor - opÁ„o 1
+	// Adicionar elemento final do vetor - op√ß√£o 1
 	/*
 	 * public void adiciona(String elemento) {
 	 * 
-	 * for (int i = 0; i < this.elementos.length; i++) { if (this.elementos[i] ==
-	 * null) { this.elementos[i] = elemento; break; } } }
+	 * 	for (int i = 0; i < this.elementos.length; i++) {
+	 *		if (this.elementos[i] == null) {
+	 *			this.elementos[i] = elemento; 
+	 *			break; 
+	 		} 
+		} 
+	 * }
 	 */
 
 	/*
@@ -23,7 +28,7 @@ public class Vetor {
 	 * 
 	 * if (this.tamanho < this.elementos.length) { this.elementos[this.tamanho] =
 	 * elemento; this.tamanho++; } else { throw new
-	 * Exception("Vetor j· est· cheio, n„o È possÌvel adicionar mais elementos"); }
+	 * Exception("Vetor j√° est√° cheio, n√£o √© poss√≠vel adicionar mais elementos"); }
 	 * }
 	 */
 
@@ -39,14 +44,14 @@ public class Vetor {
 		return false;
 	}
 
-	// Adicionando elemento em qualquer posiÁ„o
-	// 0 1 2 3 4 5 6 = tamanho È 5
+	// Adicionando elemento em qualquer posi√ß√£o
+	// 0 1 2 3 4 5 6 = tamanho √© 5
 	// B C D E F x x
 	//
 	public boolean adicionar(int posicao, String elemento) {
 
 		if (!(posicao >= 0 && posicao < tamanho)) {
-			throw new IllegalArgumentException("PosiÁ„o inv·lida");
+			throw new IllegalArgumentException("Posi√ß√£o inv√°lida");
 		}
 
 		this.aumentaCapacidade();
@@ -55,7 +60,7 @@ public class Vetor {
 		for (int i = this.tamanho - 1; i >= posicao; i--) {
 			this.elementos[i + 1] = this.elementos[i];
 		}
-		// Atribuindo o elemento a posiÁ„o desejada
+		// Atribuindo o elemento a posi√ß√£o desejada
 		this.elementos[posicao] = elemento;
 		this.tamanho++;
 
@@ -74,11 +79,11 @@ public class Vetor {
 		}
 	}
 
-	// Obtendo elemento de uma posiÁ„o
+	// Obtendo elemento de uma posi√ß√£o
 	public String buscar(int posicao) {
 
 		if (!(posicao >= 0 && posicao < this.tamanho)) {
-			throw new IllegalArgumentException("PosiÁ„o Inv·lida");
+			throw new IllegalArgumentException("Posi√ß√£o Inv√°lida");
 		}
 		return this.elementos[posicao];
 	}
@@ -95,15 +100,15 @@ public class Vetor {
 	}
 
 	// Removendo elemento do vetor
-	// B G D E F -> PosiÁ„o a ser removida È 1 (G);
-	// 0 1 2 3 4 -> Tamanho È 5
+	// B G D E F -> Posi√ß√£o a ser removida √© 1 (G);
+	// 0 1 2 3 4 -> Tamanho √© 5
 	// vetor[1] = vetor[2]
 	// vetor[2] = vetor[3]
 	// vetor[3] = vetor[4]
 	public void remover(int posicao) {
 
 		if (!(posicao >= 0 && posicao < this.tamanho)) {
-			throw new IllegalArgumentException("PosiÁ„o Inv·lida");
+			throw new IllegalArgumentException("Posi√ß√£o Inv√°lida");
 		}
 		for (int i = posicao; i < this.tamanho - 1; i++) {
 			this.elementos[i] = this.elementos[i + 1];
@@ -118,7 +123,7 @@ public class Vetor {
 		if (posicao > -1) {
 			remover(posicao);
 		} else {
-			throw new IllegalArgumentException("Valor n„o existe");
+			throw new IllegalArgumentException("Valor n√£o existe");
 		}
 
 	}
